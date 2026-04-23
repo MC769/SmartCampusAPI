@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
-@Path("/sensors")
+@Path("/api/v1/sensors")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class SensorResource {

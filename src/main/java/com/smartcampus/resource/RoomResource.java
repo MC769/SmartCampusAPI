@@ -11,7 +11,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
-@Path("/rooms")
+@Path("/api/v1/rooms") 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class RoomResource {
@@ -21,7 +21,6 @@ public class RoomResource {
         var rooms = RoomService.getAllRooms().values();
         
         if (!full) {
-            // Return only IDs and basic info
             List<Map<String, String>> simplified = rooms.stream()
                 .map(room -> Map.of(
                     "id", room.getId(),
